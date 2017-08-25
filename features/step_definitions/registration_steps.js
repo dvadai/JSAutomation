@@ -51,11 +51,19 @@ defineSupportCode(function ({Given, When, Then, setDefaultTimeout}) {
         selectCountryFromDropdownList.findElement(By.css('#dropdown_7>option:nth-child(26)')).click();
 
         //but this approach needs verification whether the selection is the expected
-        var element = selectCountryFromDropdownList.findElement(By.css('#dropdown_7>option:nth-child(26)'))
+        var country = selectCountryFromDropdownList.findElement(By.css('#dropdown_7>option:nth-child(26)'))
 
-        if (element != 'Brazil') {
-            console.log('Something went wrong with the selection, the country is not Brazil')
+        function getCountry() {
+            country.getText().then(function (text) {
+                console.log('Country is \'' + text + '\'');
+                if (text != 'Brazil'){
+
+                    return 'There was an issue'
+                }
+            });
         }
+        getCountry();
+
 
         var selectDOBMonth = this.driver.findElement(By.id('mm_date_8')).sendKeys('1')
 
@@ -64,6 +72,7 @@ defineSupportCode(function ({Given, When, Then, setDefaultTimeout}) {
         var selectDOBYear = this.driver.findElement(By.id('yy_date_8')).sendKeys('1999')
 
 
+        //In order to avoid duplications, phone numbers are randoomised. It has to be min 10 digits
         function randomisePhoneNumber() {
             var min = 1000000000;
             var max = 9999999999;
@@ -99,7 +108,9 @@ defineSupportCode(function ({Given, When, Then, setDefaultTimeout}) {
     });
 
     When(/^I submit my registration request$/, function () {
+        this.driver.sleep(2000)
         var submitRegistration = this.driver.findElement(By.name('pie_submit'))
+
         submitRegistration.click()
 
     });

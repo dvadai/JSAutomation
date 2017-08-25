@@ -26,7 +26,7 @@ Features(dir)
             - world.js
             -configInfo.json(this could be located in the root too)
 
-# 2. {defineSupportCode} and Before and after hooks
+# 2. {defineSupportCode} and Before and After hooks
 These should be definied in the hooks.js
 Depending on the project structure, you can use tagged hooks, or hooks that need to setup/teardown with every single test. 
 More information: 
@@ -57,7 +57,7 @@ Setup:
 1. Create a json file in the root directory
 2. Add the following to it
 { "browser" : "chrome"}
-3. In the hooks.js link these with: var configStuff = require('./config_example.json')
+3. In the world.js link these with: var configStuff = require('./config_example.json')
 and then give this as a parameter .forBrowser(config.browser)
 
 Do not forget to validate your config file. 

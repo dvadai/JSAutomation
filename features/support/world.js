@@ -10,14 +10,24 @@
 
 require('chromedriver')
 require('geckodriver')
+require('chai')
 
 var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 
+var configStuff = require('./config_example.json')
 
+
+this.waitForElement = function(locator) {
+    var condition = seleniumWebdriver.until.elementLocated(locator);
+    return this.driver.wait(condition)
+}
+
+//It is possible to set specific configuration for browsers to be tested in the constructor
+//Like: version and OS: forBrowser('firefox', '46', 'MAC')
 function CustomWorld() {
     this.driver = new seleniumWebdriver.Builder()
-        .forBrowser('firefox')
+        .forBrowser(configStuff.browser)
         .build();
 }
 

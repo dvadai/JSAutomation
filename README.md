@@ -61,9 +61,23 @@ Setup:
 and then give this as a parameter .forBrowser(config.browser)
 
 Do not forget to validate your config file. 
+1. Firstly, check the syntax. https://jsonlint.com/
+2. Secondly, validate errors that you throw and error when someone types in chrm instead of chrome. 
 
 **Option 4:** Cloud testing integration when the project needs to be scaled up and many browsers are supported. 
 _Browserstack_ has pretty good explanation on this:https://www.browserstack.com/automate/cucumberjs
 (Also needs a config file)
 Info about _SauceLab_ at the Sauce Labs section:
 https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
+
+# 3. Page Object Model
+_1. With a javascript object_
+You need to have a grasp understanding of module.exports and exports. 
+Some very good reading on the topic. 
+https://marmelab.com/blog/2016/04/19/e2e-testing-with-node-and-es6.html
+Also, see my implementation in my framework. 
+
+
+_2. Use an external library_
+Depending on how you approach building your test framework and whether you use selenium-webdriver or aly alternatives, 
+like webdriver.io, there cold be many libraries handy. 

@@ -15,7 +15,7 @@ require('chai')
 var seleniumWebdriver = require('selenium-webdriver');
 var {defineSupportCode} = require('cucumber');
 
-var configStuff = require('./config_example.json')
+var configStuff = require('./configExample.json')
 
 
 this.waitForElement = function(locator) {

@@ -71,13 +71,30 @@ Info about _SauceLab_ at the Sauce Labs section:
 https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
 
 # 3. Page Object Model
-_1. With a javascript object_
+_1. Use an external library_
+Depending on how you approach building your test framework and whether you use selenium-webdriver or aly alternatives, 
+like webdriver.io, there cold be many libraries handy. 
+
+_2. With a javascript object_
 You need to have a grasp understanding of module.exports and exports. 
 Some very good reading on the topic. 
 https://marmelab.com/blog/2016/04/19/e2e-testing-with-node-and-es6.html
 Also, see my implementation in my framework. 
+1. Create a new directory under features directory.
+2. Create a new .js file. 
+3. Create your class with a constructor for the driver. 
+4. Create another .js file, like loginPage or registrationPage. 
+5. Create a new class and extend your original page. 
+6. Create the constructor and set the properties, eg. set the loading URL. 
+In case of the driver call super to use the parent object. 
+Now you can start creating the methods on the page. Like register() or enterEmailAddress()
+7. Add module.exports = yourPageName; at the end of each class. 
+8. And require this on the step definition which will use the methods. 
+9. On your step definition file declare the pages as variables like:
+var myPage = new myPage(this.driver);
+Now you will be able to call your previously deined methods like:
+myPage.enterEmailAddress()
 
 
-_2. Use an external library_
-Depending on how you approach building your test framework and whether you use selenium-webdriver or aly alternatives, 
-like webdriver.io, there cold be many libraries handy. 
+
+

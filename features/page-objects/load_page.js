@@ -22,7 +22,7 @@ class Page {
     verifyTitle() {
         var expectedTitle = this.page_title
         this.driver.getTitle().then(function (title) {
-            console.log('Page title is: ' + title);
+            console.log('LoadPage title is: ' + title);
             expect(title).to.equal(expectedTitle);
         });
     }

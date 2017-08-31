@@ -9,6 +9,8 @@ class RegistrationPage extends Page {
         this.URL = "http://demoqa.com/registration/";
     }
 
+
+
     enterFirstName(name) {
         var enterFirstName = this.driver.findElement(By.id('name_3_firstname'))
         enterFirstName.click()

@@ -98,7 +98,8 @@ myPage.enterEmailAddress()
 # 4. Reporting
 _1._ You can use built in formatting and check result. If you are using WebStorm, follow the below instructions:
 https://www.jetbrains.com/help/webstorm/export-test-results.html
-2.Use a pretty HTML reporter
+
+_2.Use a pretty HTML reporter_
 Firtsly, you need to generate the results in json format. 
 If you add the following cucumber.js arugemnts when you run your tests, it will create a json file. 
 cucumber_reports.json
@@ -107,3 +108,4 @@ Then you need to convert json into a pretty html file.
 TBC
 
 
+# 5. Screenshots

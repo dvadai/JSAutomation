@@ -6,7 +6,7 @@ const HomePage = require('../page-objects/home_page');
 const RegistratonPage = require('../page-objects/registration_page');
 
 
-defineSupportCode(function ({Given, When, Then, setDefaultTimeout}) {
+defineSupportCode(function ({Given, When, Then, And,  setDefaultTimeout}) {
     setDefaultTimeout(60 * 1000);
 
     var homepage;

@@ -27,7 +27,7 @@ Features(dir)
             -configInfo.json(this could be located in the root too)
 
 # 2. {defineSupportCode} and Before and After hooks
-These should be definied in the hooks.js
+These should be defined in the hooks.js
 Depending on the project structure, you can use tagged hooks, or hooks that need to setup/teardown with every single test. 
 More information: 
 https://github.com/cucumber/cucumber-js/blob/master/docs/support_files/hooks.md
@@ -70,7 +70,7 @@ _Browserstack_ has pretty good explanation on this:https://www.browserstack.com/
 Info about _SauceLab_ at the Sauce Labs section:
 https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Your_own_automation_environment
 
-# 3. Page Object Model
+# 4. Page Object Model
 _1. Use an external library_
 Depending on how you approach building your test framework and whether you use selenium-webdriver or aly alternatives, 
 like webdriver.io, there cold be many libraries handy. 
@@ -95,6 +95,15 @@ var myPage = new myPage(this.driver);
 Now you will be able to call your previously deined methods like:
 myPage.enterEmailAddress()
 
-
+# 4. Reporting
+_1._ You can use built in formatting and check result. If you are using WebStorm, follow the below instructions:
+https://www.jetbrains.com/help/webstorm/export-test-results.html
+2.Use a pretty HTML reporter
+Firtsly, you need to generate the results in json format. 
+If you add the following cucumber.js arugemnts when you run your tests, it will create a json file. 
+cucumber_reports.json
+-f json:test/report/cucumber_report.json
+Then you need to convert json into a pretty html file. 
+TBC
 
 

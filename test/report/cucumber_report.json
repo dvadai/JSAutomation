@@ -1,0 +1,101 @@
+[
+  {
+    "description": "  As a user\n  I would like to register\n  So I can use the site",
+    "keyword": "Feature",
+    "name": "Registration",
+    "line": 1,
+    "id": "registration",
+    "tags": [],
+    "uri": "features/registration.feature",
+    "elements": [
+      {
+        "id": "registration;user-is-able-to-log-in-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "User is able to log in with valid credentials",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 6
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on the front page",
+            "match": {
+              "location": "features/step_definitions/registrationSteps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I enter my registration details",
+            "match": {
+              "location": "features/step_definitions/registrationSteps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I submit my registration request",
+            "match": {
+              "location": "features/step_definitions/registrationSteps.js:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I am registered",
+            "match": {
+              "location": "features/step_definitions/registrationSteps.js:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "features/step_definitions/hooks.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14688
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -3,10 +3,13 @@
 
 Selenium test automation framework using Javascript. A few sample tests and with description on how to set it up from scratch.
 This framework uses:
-Cucumber
-Selenium-webdriver
-chromedriver & firefoxdriver
-Assertions: chai
+- Cucumber
+- Selenium-webdriver
+- chromedriver & firefoxdriver
+- Assertions: chai
+
+If you are a bit unsure about the products out there available, you can check out this repo:
+https://github.com/atinfo/awesome-test-automation/blob/master/javascript-test-automation.md
 
 test website used: http://demoqa.com/
 
